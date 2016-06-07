@@ -1,0 +1,14 @@
+{
+  "mongo_shell":{
+    "db_help": ["db.help()", "Help on DB methods"],
+    "db_collection_help": ["db.<collection>.help()", "Help on collection methods"],
+    "show_dbs": ["show dbs", "Show all available DBs"],
+    "show_collections": ["show collections", "Show all available collections"],
+    "use_db": ["use <db_name>", "Switch DB"],
+    "find": ["db.<collection>.find({<query>})", "Find specific documents with query"],
+    "pretty": ["db.<collection>.find().pretty()", "Show the pretty view of documents"],
+    "count": ["db.<collection>.count()", "Count documents"],
+    "exit": ["exit", "Exit mongo shell"]
+  },
+
+}
