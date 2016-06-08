@@ -10,5 +10,21 @@
     "count": ["db.<collection>.count()", "Count documents"],
     "exit": ["exit", "Exit mongo shell"]
   },
+  "comparison_operators":{
+    "eq": ["db.<col>.find({$eq:<value>})", "Matches values that are equal to a specified value"],
+    "gt": ["db.<col>.find({$gt:<value>})", "Matches values that are greater than a specified values"],
+    "gte": ["db.<col>.find({$gte:<value>})", "Matches values that are greater than or equal to a specified value"],
+    "lt": ["db.<col>.find({$lt:<value>})", "Matches values that are less than a specified value"],
+    "lte": ["db.<col>.find({$lte:<value>})", "Matches values that are less than or equal to a specified value"],
+    "ne": ["db.<col>.find({$ne:<value>})", "Matches all values that are not equal to a specified value"],
+    "in": ["db.<col>.find({$in:<array>})", "Matches any of the values specified in an array"],
+    "nin": ["db.<col>.find({$nin:<array>})", "Matches none of the values specified in an array"]
+  },
+  "logical_operators": {
+    "or": ["db.<col>.find({$or:<array>})","Joins query clauses with a logical OR"],
+    "and": ["db.<col>.find({$and:<array>})", "Joins query clauses with a logical AND"],
+    "not": ["db.<col>.find({<key>:{$not:<value>}})", "Inverts the effect of a query expression"],
+    "nor": ["db.<col>.find({$nor:<array>})", "Joins query clauses with a logical NOR"]
+  }
 
 }
