@@ -25,6 +25,9 @@
     "and": ["db.<col>.find({$and:<array>})", "Joins query clauses with a logical AND"],
     "not": ["db.<col>.find({<key>:{$not:<value>}})", "Inverts the effect of a query expression"],
     "nor": ["db.<col>.find({$nor:<array>})", "Joins query clauses with a logical NOR"]
+  },
+  "array_operators":{
+    
   }
 
 }
