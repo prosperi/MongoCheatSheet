@@ -1,5 +1,5 @@
 {
-  "mongo_shell":{
+  "mongo_shell": {
     "db_help": ["db.help()", "Help on DB methods"],
     "db_collection_help": ["db.<collection>.help()", "Help on collection methods"],
     "show_dbs": ["show dbs", "Show all available DBs"],
@@ -10,24 +10,49 @@
     "count": ["db.<collection>.count()", "Count documents"],
     "exit": ["exit", "Exit mongo shell"]
   },
-  "comparison_operators":{
-    "eq": ["db.<col>.find({$eq:<value>})", "Matches values that are equal to a specified value"],
-    "gt": ["db.<col>.find({$gt:<value>})", "Matches values that are greater than a specified values"],
-    "gte": ["db.<col>.find({$gte:<value>})", "Matches values that are greater than or equal to a specified value"],
-    "lt": ["db.<col>.find({$lt:<value>})", "Matches values that are less than a specified value"],
-    "lte": ["db.<col>.find({$lte:<value>})", "Matches values that are less than or equal to a specified value"],
-    "ne": ["db.<col>.find({$ne:<value>})", "Matches all values that are not equal to a specified value"],
-    "in": ["db.<col>.find({$in:<array>})", "Matches any of the values specified in an array"],
-    "nin": ["db.<col>.find({$nin:<array>})", "Matches none of the values specified in an array"]
+
+  "query_and_projection": {
+    "comparison_operators":{
+      "eq": ["db.<col>.find({$eq:<value>})", "Matches values that are equal to a specified value"],
+      "gt": ["db.<col>.find({$gt:<value>})", "Matches values that are greater than a specified values"],
+      "gte": ["db.<col>.find({$gte:<value>})", "Matches values that are greater than or equal to a specified value"],
+      "lt": ["db.<col>.find({$lt:<value>})", "Matches values that are less than a specified value"],
+      "lte": ["db.<col>.find({$lte:<value>})", "Matches values that are less than or equal to a specified value"],
+      "ne": ["db.<col>.find({$ne:<value>})", "Matches all values that are not equal to a specified value"],
+      "in": ["db.<col>.find({$in:<array>})", "Matches any of the values specified in an array"],
+      "nin": ["db.<col>.find({$nin:<array>})", "Matches none of the values specified in an array"]
+    },
+    "logical_operators": {
+      "or": ["db.<col>.find({$or:<array>})","Joins query clauses with a logical OR"],
+      "and": ["db.<col>.find({$and:<array>})", "Joins query clauses with a logical AND"],
+      "not": ["db.<col>.find({<key>:{$not:<value>}})", "Inverts the effect of a query expression"],
+      "nor": ["db.<col>.find({$nor:<array>})", "Joins query clauses with a logical NOR"]
+    },
+    "element_operators": {
+      "exists": ["db.<col>.find({<key>:{$exists:<boolean>}})","Find documents with specific field"],
+      "type": ["db.<col>.find({<key>:{$type:<type>}})", "Find documents with the specified type of field"]
+    },
+    "evaluation_operators": {
+      "mod": ["db.<col>.find({<key>:{$mod: [<int>, <int>]}})", "Performs a modulo operation on the value of a field, selecting documents with a specified result."],
+      "regex": ["db.<col>.find({<key>:{$regex: <expression>}})", "Selects douments matching specific regex"],
+      "text": ["db.<col>.find({$text: {$search:<string>,$language:<string>,$caseSensitive:<boolean>,$diacriticSensitive:<boolean>}})", "Performs text search"],
+      "where": ["db.<col>.find({$where: <JS>})", "Selects documents matching a JS expression"]
+    },
+    "geospatial_operators": {
+
+    },
+    "array_operators": {
+      "all": ["db.<col>.find({<field>:{$all:<array>}})", "Matches arrays that contain all elements specified in the query."],
+      "elemMatch": ["db.<col>.find({<field>:{$elemMatch:{<query>, <query>,...}}})", "Selects documents if element in the array field matches all the specified $elemMatch conditions"],
+      "size": ["db.<col>.find({<field>:{$size:<int>}})", "Selects documents if the array field is a specified size"]
+    },
+    "bitwise_operators": {},
+    "comments_operators": {
+      "comment": ["db.<col>.find({$comment: <comment>})", "Add comment"]
+    },
+    "projection_operators":{}
   },
-  "logical_operators": {
-    "or": ["db.<col>.find({$or:<array>})","Joins query clauses with a logical OR"],
-    "and": ["db.<col>.find({$and:<array>})", "Joins query clauses with a logical AND"],
-    "not": ["db.<col>.find({<key>:{$not:<value>}})", "Inverts the effect of a query expression"],
-    "nor": ["db.<col>.find({$nor:<array>})", "Joins query clauses with a logical NOR"]
-  },
-  "array_operators":{
-    
-  }
+
+  "update": {}
 
 }
