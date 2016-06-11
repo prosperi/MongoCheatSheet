@@ -50,7 +50,12 @@
     "comments_operators": {
       "comment": ["db.<col>.find({$comment: <comment>})", "Add comment"]
     },
-    "projection_operators":{}
+    "projection_operators":{
+      "$": ["db.<col>.find({},{'<field>.$':1})", "Projects the first element of matching array"],
+      "meta": ["db.<col>.find({$meta: <metaDataKeyword>})", "Projects the document's score assigned during $text operation"],
+      "elemMatch": ["db.<col>.find({<field>:{$elemMatch:{<query>, <query>,...}}})", "Selects documents if element in the array field matches all the specified $elemMatch conditions"],
+      "slice": ["db.<col>.find({}, {<field>:{$slice:<number>||<array>}})", "Limit the number of elements projected from an array"]
+    }
   },
 
   "update": {}
