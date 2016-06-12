@@ -1,0 +1,25 @@
+{
+  "name": "mongo-cheat-sheet",
+  "version": "1.0.0",
+  "description": "MongoDB cheat sheet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prosperi/MongoCheatSheet.git"
+  },
+  "keywords": [
+    "mongodb",
+    "mongo",
+    "cheatsheet"
+  ],
+  "author": "@prosperi, @notgiorgi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prosperi/MongoCheatSheet/issues"
+  },
+  "homepage": "https://github.com/prosperi/MongoCheatSheet#readme",
+  "dependencies": {}
+}
